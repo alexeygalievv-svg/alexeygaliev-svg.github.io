@@ -6,8 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+/*
+  Фон и типографика как в приложении (Colors.swift):
+  systemBackground = rgb(20,20,22), label ≈ 78% белого, акцент = #ff9500
+*/
 :root{
-  color-scheme: dark light;
+  color-scheme: dark;
+  --bg-app: #141416;
+  --text-primary: #c7c7c7;
+  --text-heading: #e5e5ea;
+  --text-secondary: #98989f;
+  --accent: #ff9500;
+  --divider: rgba(255,255,255,0.1);
 }
 
 body{
@@ -16,24 +26,21 @@ body{
   margin:auto;
   padding:24px 16px 40px;
   line-height:1.6;
-  color:#111827;
-  background:#f9fafb;
-}
-
-@media(prefers-color-scheme:dark){
-  body{
-    color:#e5e7eb;
-    background:#020617;
-  }
-  a{color:#60a5fa}
+  color:var(--text-primary);
+  background:var(--bg-app);
 }
 
 h1,h2{
   margin-top:1.8em;
+  color:var(--text-heading);
+}
+
+a{
+  color:var(--accent);
 }
 
 .meta{
-  color:#6b7280;
+  color:var(--text-secondary);
   font-size:0.9rem;
 }
 
@@ -41,17 +48,13 @@ h1,h2{
   text-transform:uppercase;
   letter-spacing:0.15em;
   font-size:0.8rem;
-  color:#6b7280;
+  color:var(--text-secondary);
 }
 
 hr{
   margin:3em 0;
   border:none;
-  border-top:1px solid #e5e7eb;
-}
-
-@media(prefers-color-scheme:dark){
-  hr{border-top-color:#1f2937}
+  border-top:1px solid var(--divider);
 }
 </style>
 
